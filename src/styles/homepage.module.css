@@ -93,3 +93,40 @@ footer {
   font-size: 14px;
   color: #888;
 }
+.hero-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.hero-section .container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.hero-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background-color: #00b894;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #019875;
+}
