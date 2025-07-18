@@ -1,0 +1,95 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Nastaliq Urdu', 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f7fa;
+  color: #1c1c1c;
+  direction: rtl;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  background-color: #031926;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: #0f3d4a;
+}
+
+.tool-card {
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.tool-card h2 {
+  color: #1a1a1a;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.tool-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.tool-card button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tool-card button:hover {
+  background-color: #005fa3;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  color: #666;
+  font-size: 14px;
+}
