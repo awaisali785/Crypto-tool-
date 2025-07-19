@@ -7,13 +7,11 @@
   <meta name="keywords" content="crypto tools, forex tools, stock signals, AI trading, technical analysis, smart money concept, chart patterns">
   <meta name="author" content="Technical Owais Ali" />
   <title>Crypto Tools | Technical Owais Ali</title>
-  
-  <!-- Favicon -->
+
   <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-  
-  <!-- External Styles -->
   <link rel="stylesheet" href="./styles/signal-card.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4d61e9f4b1.js" crossorigin="anonymous"></script> <!-- Icons -->
 
   <style>
     body {
@@ -29,16 +27,44 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     nav a {
-      margin: 0 1rem;
       color: #fff;
       text-decoration: none;
       font-weight: 500;
     }
 
     nav a:hover {
+      color: #00ffc3;
+    }
+
+    .auth-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .auth-icons i {
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .auth-icons i:hover {
       color: #00ffc3;
     }
 
@@ -83,6 +109,12 @@
 
     .feature-card h3 {
       color: #00ffc3;
+      font-size: 1.3rem;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #ccc;
     }
 
     footer {
@@ -92,6 +124,33 @@
       color: #aaa;
       font-size: 0.9rem;
     }
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.4rem 0;
+      }
+
+      .auth-icons {
+        margin-top: 1rem;
+      }
+
+      .feature-card {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 
@@ -99,14 +158,23 @@
 
   <!-- 🔹 Header -->
   <header>
-    <a href="./logo.html"><img src="./favicon.ico" alt="Logo" width="40" /></a>
+    <div class="logo-area">
+      <a href="./logo.html"><img src="./favicon.ico" alt="Logo" width="40" /></a>
+    </div>
+
     <nav>
       <a href="./index.html">Home</a>
       <a href="./tools.html">Tools</a>
-      <a href="./chat-analyzer.html">Chatbot</a>
+      <a href="./chat-analyzer.html">Learning</a>
       <a href="./blog.html">Blog</a>
       <a href="./contact.html">Contact</a>
     </nav>
+
+    <div class="auth-icons">
+      <i class="fas fa-bell" title="Notifications"></i>
+      <i class="fas fa-user-plus" title="Sign Up"></i>
+      <i class="fas fa-sign-in-alt" title="Sign In"></i>
+    </div>
   </header>
 
   <!-- 🔹 Hero Section -->
@@ -121,32 +189,32 @@
   <!-- 🔹 Features Section -->
   <section class="features">
     <div class="feature-card">
-      <h3>📈 Signal Generator</h3>
+      <h3><i class="fas fa-bolt"></i> Signal Generator</h3>
       <p>High-accuracy buy/sell signals with SL/TP zones using advanced chart recognition.</p>
     </div>
 
     <div class="feature-card">
-      <h3>🧠 AI Chart Analyzer</h3>
+      <h3><i class="fas fa-chart-line"></i> AI Chart Analyzer</h3>
       <p>Upload any chart image and get complete technical + fundamental analysis instantly.</p>
     </div>
 
     <div class="feature-card">
-      <h3>📚 Learning Bot</h3>
+      <h3><i class="fas fa-robot"></i> Learning Bot</h3>
       <p>Interactive chatbot to teach you trading from beginner to pro – Urdu & English both.</p>
     </div>
 
     <div class="feature-card">
-      <h3>💹 Money Management</h3>
+      <h3><i class="fas fa-wallet"></i> Money Management</h3>
       <p>Calculate safe risk/reward ratio, profit/loss and capital allocation like a pro.</p>
     </div>
 
     <div class="feature-card">
-      <h3>🌐 Live Market News</h3>
+      <h3><i class="fas fa-newspaper"></i> Live Market News</h3>
       <p>Real-time updates & news analysis affecting crypto, forex, and stock markets.</p>
     </div>
 
     <div class="feature-card">
-      <h3>🔒 Access Control</h3>
+      <h3><i class="fas fa-lock"></i> Access Control</h3>
       <p>Free users get 2 signals/day, paid users get full access. Smart API fallback built-in.</p>
     </div>
   </section>
@@ -156,8 +224,9 @@
     &copy; 2025 Technical Owais Ali | All Rights Reserved. | Powered by AI
   </footer>
 
-  <!-- 🔹 External Scripts -->
+  <!-- 🔹 Scripts -->
   <script src="./scripts/newbar.js"></script>
   <script src="./scripts/main.js"></script>
+
 </body>
 </html>
