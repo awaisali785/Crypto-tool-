@@ -1,64 +1,37 @@
+<!-- /public/tools.html -->
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI ٹریڈنگ ٹولز</title>
-  <link rel="stylesheet" href="./styles/signal-card.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chart Analysis Tool | CryptoTool</title>
+  <link rel="stylesheet" href="/styles/signal-card.css" />
 </head>
 <body>
   <header>
-    <h1>AI ٹریڈنگ ٹولز</h1>
-    <nav>
-      <a href="index.html">ہوم</a>
-      <a href="tools.html" class="active">ٹولز</a>
-      <a href="blog.html">بلاگ</a>
-    </nav>
+    <h1>Chart Analysis Tool</h1>
+    <p>Upload any Crypto, Forex or Stock chart image for AI-based analysis</p>
   </header>
 
   <main>
-  <!-- Existing sections can stay here -->
-
-  <!-- New Tool Section Starts -->
-  <section class="tool-card">
-    <h2>📷 Upload Chart (چارٹ اپلوڈ کریں)</h2>
-    <p>Upload your chart and get instant AI analysis. (اپنا چارٹ اپلوڈ کریں اور فوری تجزیہ حاصل کریں)</p>
-    <button>Upload Now (ابھی اپلوڈ کریں)</button>
-  </section>
-
-  <section class="tool-card">
-    <h2>📉 Signal Check (سگنل چیک کریں)</h2>
-    <p>Check Buy/Sell zones, SL & TP with AI support. (Buy/Sell زون، SL اور TP AI کے ساتھ دیکھیں)</p>
-    <button>Get Signal (سگنل حاصل کریں)</button>
-  </section>
-
-  <section class="tool-card">
-    <h2>🎓 Learn Trading (ٹریڈنگ سیکھیں)</h2>
-    <p>Learn candles, patterns & indicators easily. (کینڈلز، پیٹرن اور انڈیکیٹرز آسانی سے سیکھیں)</p>
-    <button>Start Learning (سیکھنا شروع کریں)</button>
-  </section>
-  <!-- New Tool Section Ends -->
-    <section class="tool-card">
-      <h2>📈 چارٹ اپلوڈ کریں</h2>
-      <p>اپنا چارٹ اپلوڈ کریں اور AI سے تجزیہ حاصل کریں۔</p>
-      <button>ابھی اپلوڈ کریں</button>
+    <section class="upload-box">
+      <input type="file" id="chartInput" accept="image/*" />
+      <label for="chartInput">📈 Upload Chart</label>
     </section>
 
-    <section class="tool-card">
-      <h2>📊 سگنل تجزیہ</h2>
-      <p>AI کی مدد سے Buy/Sell، SL/TP زونز دیکھیں۔</p>
-      <button>سگنل حاصل کریں</button>
+    <section class="preview">
+      <img id="previewImage" alt="Uploaded Chart will appear here" />
     </section>
 
-    <section class="tool-card">
-      <h2>🎓 سیکھیں</h2>
-      <p>چارٹس پڑھنے کا طریقہ، پیٹرنز اور انڈیکیٹرز سیکھیں۔</p>
-      <button>ابھی سیکھیں</button>
+    <section class="chatbox">
+      <div id="chatMessages" class="messages"></div>
+      <form id="chatForm">
+        <input type="text" id="userInput" placeholder="Type your question here..." />
+        <button type="submit">Send</button>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 ٹیکنیکل اویس علی - تمام حقوق محفوظ ہیں۔</p>
-  </footer>
+  <script src="/scripts/main.js"></script>
 </body>
 </html>
