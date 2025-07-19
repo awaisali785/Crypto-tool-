@@ -1,4 +1,4 @@
-/* Reset */
+/* ===== Reset and Base Styles ===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,86 +7,88 @@
 
 body {
   font-family: 'Noto Nastaliq Urdu', 'Segoe UI', Tahoma, sans-serif;
-  background-color: #f0f4f8;
+  background-color: #f4f7fa;
   color: #1c1c1c;
   direction: rtl;
   padding: 20px;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
-  background: linear-gradient(to left, #003147, #005b96);
-  color: #ffffff;
-  padding: 24px;
-  border-radius: 16px;
   text-align: center;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #031926;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 header h1 {
-  font-size: 30px;
-  margin-bottom: 8px;
+  font-size: 28px;
 }
 
 nav {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 nav a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 8px 16px;
-  border-radius: 10px;
-  transition: background 0.3s;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
-  background-color: rgba(255, 255, 255, 0.3);
+nav a.active,
+nav a:hover {
+  background-color: #0f3d4a;
 }
 
-/* Tool Cards */
+/* ===== Tool Cards ===== */
 .tool-card {
   background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 16px;
-  padding: 24px;
+  border: 1px solid #dedede;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease-in-out;
-  position: relative;
 }
 
 .tool-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 .tool-card h2 {
-  font-size: 24px;
-  color: #222;
+  color: #031926;
+  font-size: 22px;
   margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.tool-card h2 svg {
-  width: 22px;
-  height: 22px;
-  stroke: #007acc;
 }
 
 .tool-card p {
   font-size: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   color: #444;
 }
 
+/* ===== Icons (colored) ===== */
+.tool-card i {
+  font-size: 30px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.ai-icon { color: #0077cc; }
+.crypto-icon { color: #ff9800; }
+.money-icon { color: #4caf50; }
+.price-icon { color: #9c27b0; }
+.blog-icon { color: #e91e63; }
+.about-icon { color: #2196f3; }
+
+/* ===== Buttons ===== */
 .tool-card button {
   background-color: #0077cc;
   color: white;
@@ -96,26 +98,17 @@ nav a.active {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.tool-card button svg {
-  width: 18px;
-  height: 18px;
-  stroke: white;
 }
 
 .tool-card button:hover {
   background-color: #005fa3;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 16px;
-  margin-top: 40px;
+  margin-top: 30px;
+  padding: 10px;
+  color: #666;
   font-size: 14px;
-  color: #777;
 }
