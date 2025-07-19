@@ -147,3 +147,6 @@ body {
     display: none !important;
   }
 }
+.custom-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,... stroke='white' ...") !important;
+}
