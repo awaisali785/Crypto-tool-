@@ -2,179 +2,174 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Trading Tools</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
     body {
-      background-color: #f9f9f9;
-      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #ffffff;
+      padding: 20px;
     }
-    .navbar {
-      background-color: #0d1b2a;
-    }
-    .navbar-brand, .nav-link, .btn {
-      color: white !important;
-    }
-    .btn-login {
-      background-color: #1b263b;
-      border: none;
-      padding: 6px 12px;
-      margin-left: 10px;
-    }
-    .ticker-bar {
-      background-color: #1b263b;
-      color: white;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .ticker-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 25s linear infinite;
-    }
-    @keyframes scroll-left {
-      from { transform: translateX(0%); }
-      to { transform: translateX(-100%); }
-    }
-    .main-section {
-      padding: 40px 20px;
-      background-color: #ffffff;
-    }
-    .card {
-      border: none;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #161b22;
+      padding: 15px 30px;
       border-radius: 15px;
-      box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
-    .footer {
-      background-color: #0d1b2a;
-      color: white;
-      padding: 20px 0;
-      position: relative;
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #58a6ff;
     }
-    .chat-icon {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #1b263b;
+    header nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    header nav a {
+      text-decoration: none;
+      color: #c9d1d9;
+      font-weight: 500;
+    }
+    header nav a:hover {
+      color: #58a6ff;
+    }
+    .auth-buttons button {
+      background: #238636;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
       color: white;
-      padding: 14px;
-      border-radius: 50%;
-      font-size: 20px;
-      z-index: 9999;
+      margin-left: 10px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .auth-buttons button:hover {
+      background: #2ea043;
+    }
+    .notification-icon {
+      font-size: 18px;
+      color: #58a6ff;
+      margin-left: 20px;
       cursor: pointer;
     }
-    .newsletter input {
-      padding: 8px;
-      width: 70%;
-      border: none;
-      border-radius: 4px;
-      margin-right: 8px;
+
+    .news-box {
+      background: #161b22;
+      border-left: 5px solid #58a6ff;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 25px;
     }
-    .newsletter button {
-      padding: 8px 12px;
-      background-color: #1b9aaa;
-      border: none;
-      border-radius: 4px;
-      color: white;
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .card {
+      flex: 1 1 calc(33% - 20px);
+      background: #161b22;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card i {
+      font-size: 40px;
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #8b949e;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #1f2937;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #8b949e;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
   <!-- Header -->
+  <header>
+    <div class="logo">AI Trading Tools</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Tools</a>
+      <a href="#">Learning</a>
+      <a href="#">Blogs</a>
+      <i class="fas fa-bell notification-icon"></i>
+      <div class="auth-buttons">
+        <button>Sign In</button>
+        <button>Sign Up</button>
+      </div>
+    </nav>
+  </header>
 
-  <!-- Live Price Ticker -->
-  <div class="ticker-bar">
-    <div class="ticker-text">
-      🪙 BTC/USD: $63,000 &nbsp;&nbsp;&nbsp; ETH/USD: $3,100 &nbsp;&nbsp;&nbsp; GBP/USD: 1.29 &nbsp;&nbsp;&nbsp; EUR/USD: 1.10 &nbsp;&nbsp;&nbsp; GOLD: $2,450 &nbsp;&nbsp;&nbsp; APPLE: $198.35 &nbsp;&nbsp;&nbsp; TESLA: $235.67 &nbsp;&nbsp;&nbsp;
-    </div>
+  <!-- News Box -->
+  <div class="news-box">
+    <h2>📢 Latest Market News</h2>
+    <p>Stay updated with real-time Crypto, Forex & Stock news powered by AI. More coming soon...</p>
   </div>
 
-  <!-- Main Section -->
-  <section class="main-section text-center">
-    <h1>AI-Powered Signal Generator</h1>
-    <p>Upload chart images or view market analysis in real-time.</p>
-
-    <div class="row mt-5">
-      <div class="col-md-4 mb-4">
-        <div class="card p-4">
-          <i class="bi bi-graph-up fs-1 mb-3 text-primary"></i>
-     <!-- Header -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <!-- Logo + Website Name -->
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="logo.png" alt="Logo" width="35" height="35" class="me-2" />
-      <span>AI Trading Tools</span>
-    </a>
-
-    <!-- Responsive Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navigation Items -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Learning</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-      </ul>
-
-      <!-- Bell Icon + Buttons -->
-      <i class="bi bi-bell-fill fs-5 me-3 text-white" style="cursor: pointer;"></i>
-      <button class="btn btn-login">Login</button>
-      <button class="btn btn-login">Sign Up</button>
+  <!-- Feature Cards -->
+  <div class="cards">
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Live Market News</h3>
+      <p>Instant AI-based news from Crypto, Forex, and Stock markets.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-lock"></i>
+      <h3>Access Control</h3>
+      <p>Free & premium signal access with usage limits and smart alerts.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-calculator"></i>
+      <h3>Money Management</h3>
+      <p>Auto risk calculator with TP/SL and capital risk zone analysis.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-robot"></i>
+      <h3>Learning Bot</h3>
+      <p>Upload chart/image and learn smart analysis step-by-step with AI.</p>
     </div>
   </div>
-</nav>     <h4>Signal Generator</h4>
-          <p>Analyze chart patterns and get automatic Buy/Sell signals with SL/TP.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card p-4">
-          <i class="bi bi-mortarboard-fill fs-1 mb-3 text-success"></i>
-          <h4>Learning Board</h4>
-          <p>Get educational content on trading, risk management and strategy building.</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card p-4">
-          <i class="bi bi-calculator-fill fs-1 mb-3 text-warning"></i>
-          <h4>Money Manager</h4>
-          <p>Calculate your capital, risk, and profit/loss based on your strategy.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
-  <footer class="footer text-center">
-    <div class="container">
-      <div class="row mb-3">
-        <div class="col-md-3"><a href="#" class="text-white">Home</a></div>
-        <div class="col-md-3"><a href="#" class="text-white">Disclaimer</a></div>
-        <div class="col-md-3"><a href="#" class="text-white">Explore Tools</a></div>
-        <div class="col-md-3"><a href="#" class="text-white">About Us</a></div>
-      </div>
-      <div class="newsletter mb-3">
-        <form class="d-flex justify-content-center">
-          <input type="email" placeholder="Your email..." required />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-      <p class="mb-0">&copy; 2025 Technical Owais Ali. All rights reserved.</p>
-    </div>
+  <footer>
+    <p>&copy; 2025 Technical Owais Ali. All rights reserved.</p>
   </footer>
 
-  <!-- Floating Chat Icon -->
-  <div class="chat-icon">
-    <i class="bi bi-chat-dots-fill"></i>
-  </div>
-
 </body>
-  </html>
+</html>
