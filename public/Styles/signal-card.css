@@ -1,84 +1,91 @@
-/* /public/styles/signal-card.css */
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
+/* Reset styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
   color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.upload-box {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.upload-box input[type="file"] {
-  display: none;
-}
-
-.upload-box label {
-  background-color: #0066cc;
+  background-color: #0f172a;
+  padding: 1rem 2rem;
   color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
+  text-align: center;
 }
 
-.preview img {
-  max-width: 100%;
-  max-height: 400px;
-  display: block;
-  margin: 10px auto;
-  border-radius: 10px;
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.chatbox {
-  margin-top: 30px;
-}
-
-.chatbox .messages {
-  height: 200px;
-  overflow-y: auto;
-  background: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.chatbox form {
+.hero {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: #e2e8f0;
 }
 
-.chatbox input[type="text"] {
+.hero-text {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #999;
-  border-radius: 6px;
-  margin-right: 10px;
+  padding: 1rem;
 }
 
-.chatbox button {
-  padding: 10px 20px;
-  background: #28a745;
+.hero img {
+  max-width: 300px;
+  flex: 1;
+  padding: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background: #0f172a;
   color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .hero img {
+    margin-top: 1rem;
+  }
 }
