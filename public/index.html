@@ -2,173 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Trading Tools</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-      background: #0d1117;
-      color: #ffffff;
-      padding: 20px;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #161b22;
-      padding: 15px 30px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-    }
-    header .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #58a6ff;
-    }
-    header nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-    header nav a {
-      text-decoration: none;
-      color: #c9d1d9;
-      font-weight: 500;
-    }
-    header nav a:hover {
-      color: #58a6ff;
-    }
-    .auth-buttons button {
-      background: #238636;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 8px;
-      color: white;
-      margin-left: 10px;
-      cursor: pointer;
-      font-weight: 500;
-    }
-    .auth-buttons button:hover {
-      background: #2ea043;
-    }
-    .notification-icon {
-      font-size: 18px;
-      color: #58a6ff;
-      margin-left: 20px;
-      cursor: pointer;
-    }
-
-    .news-box {
-      background: #161b22;
-      border-left: 5px solid #58a6ff;
-      padding: 20px;
-      border-radius: 15px;
-      margin-bottom: 25px;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
-
-    .card {
-      flex: 1 1 calc(33% - 20px);
-      background: #161b22;
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card i {
-      font-size: 40px;
-      color: #58a6ff;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      margin: 10px 0;
-      font-size: 20px;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #8b949e;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      background: #1f2937;
-    }
-
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      color: #8b949e;
-      font-size: 14px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Trading Tool</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-  <!-- Header -->
-  <header>
-    <div class="logo">AI Trading Tools</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Tools</a>
-      <a href="#">Learning</a>
-      <a href="#">Blogs</a>
-      <i class="fas fa-bell notification-icon"></i>
-      <div class="auth-buttons">
-        <button>Sign In</button>
-        <button>Sign Up</button>
-      </div>
-    </nav>
+  <!-- ✅ HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">AI Trading Tool</h1>
+      <nav class="space-x-6 flex items-center text-gray-700 font-medium">
+        <a href="#" class="hover:text-indigo-600">Home</a>
+        <a href="#" class="hover:text-indigo-600">Tools</a>
+        <a href="#" class="hover:text-indigo-600">Learning</a>
+        <a href="#" class="hover:text-indigo-600">Blogs</a>
+        <i class="fas fa-bell text-lg hover:text-indigo-600 cursor-pointer"></i>
+        <button class="bg-indigo-600 text-white px-3 py-1 rounded hover:bg-indigo-700">Sign In</button>
+        <button class="border border-indigo-600 text-indigo-600 px-3 py-1 rounded hover:bg-indigo-600 hover:text-white">Sign Up</button>
+      </nav>
+    </div>
   </header>
 
-  <!-- News Box -->
-  <div class="news-box">
-    <h2>📢 Latest Market News</h2>
-    <p>Stay updated with real-time Crypto, Forex & Stock news powered by AI. More coming soon...</p>
-  </div>
+  <!-- ✅ LATEST NEWS BOX -->
+  <section class="bg-yellow-50 py-6 shadow-inner">
+    <div class="container mx-auto px-4">
+      <h2 class="text-xl font-semibold mb-2 text-gray-800">📢 Latest Market News</h2>
+      <marquee class="text-sm text-gray-700" behavior="scroll" direction="left">
+        Bitcoin touches $70k | EUR/USD analysis update | Apple stock surges after earnings | Crude oil sees resistance near $80 | Fed meeting ahead – expected rate hold
+      </marquee>
+    </div>
+  </section>
 
-  <!-- Feature Cards -->
-  <div class="cards">
-    <div class="card">
-      <i class="fas fa-chart-line"></i>
-      <h3>Live Market News</h3>
-      <p>Instant AI-based news from Crypto, Forex, and Stock markets.</p>
+  <!-- ✅ 3 FEATURE CARDS -->
+  <section class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+      <i class="fas fa-chart-line text-4xl text-indigo-600 mb-4"></i>
+      <h3 class="text-lg font-semibold mb-2">Live Technical Analysis</h3>
+      <p class="text-sm text-gray-600">Auto-detect candlestick & chart patterns for crypto, forex & stocks.</p>
     </div>
-    <div class="card">
-      <i class="fas fa-lock"></i>
-      <h3>Access Control</h3>
-      <p>Free & premium signal access with usage limits and smart alerts.</p>
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+      <i class="fas fa-robot text-4xl text-indigo-600 mb-4"></i>
+      <h3 class="text-lg font-semibold mb-2">AI Signal Engine</h3>
+      <p class="text-sm text-gray-600">Accurate buy/sell zones, SL/TP & smart money concepts (SMC).</p>
     </div>
-    <div class="card">
-      <i class="fas fa-calculator"></i>
-      <h3>Money Management</h3>
-      <p>Auto risk calculator with TP/SL and capital risk zone analysis.</p>
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+      <i class="fas fa-language text-4xl text-indigo-600 mb-4"></i>
+      <h3 class="text-lg font-semibold mb-2">Bilingual Learning</h3>
+      <p class="text-sm text-gray-600">Get analysis & trading education in English + Urdu. Beginner to Pro.</p>
     </div>
-    <div class="card">
-      <i class="fas fa-robot"></i>
-      <h3>Learning Bot</h3>
-      <p>Upload chart/image and learn smart analysis step-by-step with AI.</p>
-    </div>
-  </div>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Technical Owais Ali. All rights reserved.</p>
+  <!-- ✅ FOOTER -->
+  <footer class="bg-white border-t mt-12">
+    <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+      <p>&copy; 2025 Technical Owais Ali. All rights reserved.</p>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:text-indigo-600">Privacy Policy</a>
+        <a href="#" class="hover:text-indigo-600">Terms</a>
+        <a href="#" class="hover:text-indigo-600">Contact</a>
+      </div>
+    </div>
   </footer>
 
 </body>
