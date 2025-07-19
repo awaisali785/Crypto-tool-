@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chart Analyzer Tool</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #38bdf8;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin: 20px auto;
+    }
+
+    .chat-box {
+      background: #0f172a;
+      padding: 10px;
+      border-radius: 12px;
+      height: 300px;
+      overflow-y: auto;
+      margin-top: 20px;
+      border: 1px solid #334155;
+    }
+
+    .chat-bubble {
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 10px 14px;
+      border-radius: 12px;
+      margin: 10px 0;
+      max-width: 80%;
+    }
+
+    .chat-bubble.user {
+      background: #10b981;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: block;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Your Chart</h1>
+    <input type="file" id="chartUpload" accept="image/*" />
+    <button onclick="analyzeChart()">Analyze Chart</button>
+
+    <div class="chat-box" id="chatBox">
+      <!-- AI + User messages appear here -->
+    </div>
+  </div>
+
+  <script>
+    function analyzeChart() {
+      const chatBox = document.getElementById("chatBox");
+      const fileInput = document.getElementById("chartUpload");
+      if (!fileInput.files[0]) {
+        alert("Please upload a chart image first.");
+        return;
+      }
+
+      const userBubble = document.createElement("div");
+      userBubble.className = "chat-bubble user";
+      userBubble.innerText = "Chart uploaded. Analyzing...";
+      chatBox.appendChild(userBubble);
+
+      const aiBubble = document.createElement("div");
+      aiBubble.className = "chat-bubble";
+      aiBubble.innerText = "Reading the chart... This is a demo message. Real analysis will be added soon using AI.";
+      chatBox.appendChild(aiBubble);
+
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
