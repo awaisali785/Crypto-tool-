@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: 'Noto Nastaliq Urdu', 'Segoe UI', Tahoma, sans-serif;
-  background-color: #f0f4f8;
-  color: #1b1b1b;
+  font-family: 'Segoe UI', 'Noto Nastaliq Urdu', Tahoma, sans-serif;
+  background-color: #eef3f7;
+  color: #1c1c1c;
   direction: rtl;
   padding: 20px;
 }
@@ -16,17 +16,17 @@ body {
 /* ===== Header ===== */
 header {
   text-align: center;
-  background: linear-gradient(to right, #031926, #114b5f);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #ffffff;
   padding: 25px;
-  border-radius: 16px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 800;
 }
 
 /* ===== Navigation ===== */
@@ -38,66 +38,79 @@ nav a {
   color: white;
   text-decoration: none;
   margin: 0 10px;
-  font-weight: bold;
+  font-weight: 600;
   padding: 8px 16px;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: all 0.3s ease;
   background-color: transparent;
 }
 
 nav a.active,
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* ===== Tool Cards ===== */
 .tool-card {
   background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 14px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
   padding: 25px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease-in-out;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease-in-out;
   position: relative;
-  overflow: hidden;
 }
 
 .tool-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .tool-card h2 {
   font-size: 24px;
-  color: #031926;
-  margin-bottom: 12px;
+  color: #0f2027;
+  margin-bottom: 10px;
 }
 
 .tool-card p {
   font-size: 16px;
-  color: #555;
-  margin-bottom: 18px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 /* ===== Icons ===== */
 .tool-card i {
-  font-size: 36px;
+  font-size: 34px;
   margin-left: 12px;
   vertical-align: middle;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .tool-card:hover i {
-  transform: scale(1.2);
+  transform: scale(1.25);
 }
 
-.ai-icon { color: #0077cc; }
-.crypto-icon { color: #ff9800; }
-.money-icon { color: #4caf50; }
-.price-icon { color: #9c27b0; }
-.blog-icon { color: #e91e63; }
-.about-icon { color: #03a9f4; }
+/* ===== Icon Colors ===== */
+.ai-icon {
+  color: #2196f3; /* blue */
+}
+.crypto-icon {
+  color: #ff9800; /* orange */
+}
+.money-icon {
+  color: #4caf50; /* green */
+}
+.price-icon {
+  color: #9c27b0; /* purple */
+}
+.blog-icon {
+  color: #e91e63; /* pink */
+}
+.about-icon {
+  color: #00bcd4; /* cyan */
+}
 
 /* ===== Buttons ===== */
 .tool-card button {
@@ -107,14 +120,14 @@ nav a:hover {
   padding: 10px 22px;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .tool-card button:hover {
-  background: linear-gradient(to right, #005fa3, #004b84);
-  transform: scale(1.05);
+  background: linear-gradient(to right, #005fa3, #00407a);
+  transform: scale(1.07);
 }
 
 /* ===== Footer ===== */
@@ -123,21 +136,21 @@ footer {
   margin-top: 40px;
   padding: 15px;
   font-size: 14px;
-  color: #888;
+  color: #777;
 }
 
 /* ===== Responsive Fixes ===== */
 @media (max-width: 768px) {
   .tool-card {
-    padding: 18px;
+    padding: 20px;
   }
 
   header h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   nav a {
-    font-size: 14px;
-    padding: 6px 12px;
+    font-size: 13px;
+    padding: 6px 10px;
   }
 }
