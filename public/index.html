@@ -1,204 +1,94 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI Powered Crypto, Forex & Stock Tools | Technical Analysis, Signals, Chatbot, Learning, and More">
-  <meta name="keywords" content="crypto tools, forex tools, stock signals, AI trading, technical analysis, smart money concept, chart patterns">
-  <meta name="author" content="Technical Owais Ali" />
-  <title>Crypto Tools | Technical Owais Ali</title>  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./styles/signal-card.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/4d61e9f4b1.js" crossorigin="anonymous"></script> <!-- Icons -->  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0e1117;
-      color: #ffffff;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trading Tools</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a2e0e9e809.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
-    header {
-      background-color: #151a23;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">TradeMaster</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Signal Tool</a>
+      <a href="#">Learning Board</a>
+      <a href="#">Money Management</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="header-icons">
+      <button class="btn">Sign Up</button>
+      <button class="btn">Login</button>
+      <i class="fas fa-bell notify-bell"></i>
+    </div>
+  </header>
 
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+  <!-- Live Ticker -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>BTC/USD: $67,482</span>
+      <span>ETH/USD: $3,472</span>
+      <span>GBP/USD: 1.2876</span>
+      <span>Gold: $2,384</span>
+      <span>AAPL: $215.30</span>
+      <span>EUR/USD: 1.0921</span>
+    </div>
+  </div>
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>AI Powered Chart Analyzer</h1>
+    <p>Upload a chart and get powerful trading insights in Urdu & English.</p>
+  </section>
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
+  <!-- Cards Section -->
+  <section class="cards">
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Signal Generator</h3>
+      <p>Smart buy/sell signals with SL/TP zones</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>Learning Board</h3>
+      <p>Learn trading patterns & strategies from scratch</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-coins"></i>
+      <h3>Money Management</h3>
+      <p>Risk calculation, equity control, capital planning</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-blog"></i>
+      <h3>Trading Blog</h3>
+      <p>Latest market updates & tutorials</p>
+    </div>
+  </section>
 
-    nav a:hover {
-      color: #00ffc3;
-    }
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Disclaimer</a>
+      <a href="#">Explore Tools</a>
+      <a href="#">About Us</a>
+    </div>
+    <form class="newsletter">
+      <label for="email">Subscribe to Newsletter:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </footer>
 
-    .auth-icons {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+  <!-- Floating Chat Icon -->
+  <div class="chat-icon">
+    <i class="fas fa-comment-dots"></i>
+  </div>
 
-    .auth-icons i {
-      color: #ccc;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .auth-icons i:hover {
-      color: #00ffc3;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 5rem 2rem;
-      background: linear-gradient(145deg, #131a23, #0f141c);
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      color: #00ffc3;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 1rem auto;
-      color: #c3c3c3;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 3rem 1rem;
-      background-color: #10151f;
-    }
-
-    .feature-card {
-      background-color: #1b2230;
-      margin: 1rem;
-      padding: 1.5rem;
-      border-radius: 12px;
-      width: 280px;
-      box-shadow: 0 0 10px rgba(0, 255, 195, 0.1);
-      transition: transform 0.2s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .feature-card h3 {
-      color: #00ffc3;
-      font-size: 1.3rem;
-    }
-
-    .feature-card p {
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-
-    footer {
-      background-color: #0d121a;
-      padding: 2rem;
-      text-align: center;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Menu */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        justify-content: flex-start;
-        width: 100%;
-        margin-top: 1rem;
-      }
-
-      nav a {
-        display: block;
-        margin: 0.4rem 0;
-      }
-
-      .auth-icons {
-        margin-top: 1rem;
-      }
-
-      .feature-card {
-        width: 90%;
-      }
-    }
-  </style></head><body>  <!-- 🔹 Header -->  <header>
-    <div class="logo-area">
-      <a href="./logo.html"><img src="./favicon.ico" alt="Logo" width="40" /></a>
-    </div><nav>
-  <a href="./index.html">Home</a>
-  <a href="./tools.html">Tools</a>
-  <a href="./chat-analyzer.html">Learning</a>
-  <a href="./blog.html">Blog</a>
-  <a href="./contact.html">Contact</a>
-</nav>
-
-<div class="auth-icons">
-  <i class="fas fa-bell" title="Notifications"></i>
-  <i class="fas fa-user-plus" title="Sign Up"></i>
-  <i class="fas fa-sign-in-alt" title="Sign In"></i>
-</div>
-
-  </header>  <!-- 🔹 Hero Section -->  <section class="hero">
-    <h1>AI-Powered Trading Tools for Crypto, Forex & Stocks</h1>
-    <p>
-      Discover smart signals, chart analysis, and educational tools driven by Artificial Intelligence.
-      Learn, Analyze, and Trade like professionals — in English and Urdu.
-    </p>
-  </section>  <!-- 🔹 Features Section -->  <section class="features">
-    <div class="feature-card">
-      <h3><i class="fas fa-bolt"></i> Signal Generator</h3>
-      <p>High-accuracy buy/sell signals with SL/TP zones using advanced chart recognition.</p>
-    </div><div class="feature-card">
-  <h3><i class="fas fa-chart-line"></i> AI Chart Analyzer</h3>
-  <p>Upload any chart image and get complete technical + fundamental analysis instantly.</p>
-</div>
-
-<div class="feature-card">
-  <h3><i class="fas fa-robot"></i> Learning Bot</h3>
-  <p>Interactive chatbot to teach you trading from beginner to pro – Urdu & English both.</p>
-</div>
-
-<div class="feature-card">
-  <h3><i class="fas fa-wallet"></i> Money Management</h3>
-  <p>Calculate safe risk/reward ratio, profit/loss and capital allocation like a pro.</p>
-</div>
-
-<div class="feature-card">
-  <h3><i class="fas fa-newspaper"></i> Live Market News</h3>
-  <p>Real-time updates & news analysis affecting crypto, forex, and stock markets.</p>
-</div>
-
-<div class="feature-card">
-  <h3><i class="fas fa-lock"></i> Access Control</h3>
-  <p>Free users get 2 signals/day, paid users get full access. Smart API fallback built-in.</p>
-</div>
-
-  </section>  <!-- 🔹 Footer -->  <footer>
-    &copy; 2025 Technical Owais Ali | All Rights Reserved. | Powered by AI
-  </footer>  <!-- 🔹 Scripts -->  <script src="./scripts/newbar.js"></script>  <script src="./scripts/main.js"></script></body>
+</body>
 </html>
