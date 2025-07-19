@@ -3,61 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Trading Tools | Technical Owais</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a2e0e6fa0d.js" crossorigin="anonymous"></script>
+  <meta name="description" content="AI Powered Crypto, Forex & Stock Tools | Technical Analysis, Signals, Chatbot, Learning, and More">
+  <meta name="keywords" content="crypto tools, forex tools, stock signals, AI trading, technical analysis, smart money concept, chart patterns">
+  <meta name="author" content="Technical Owais Ali" />
+  <title>Crypto Tools | Technical Owais Ali</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  
+  <!-- External Styles -->
+  <link rel="stylesheet" href="./styles/signal-card.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0e1117;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #151a23;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00ffc3;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(145deg, #131a23, #0f141c);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #00ffc3;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 1rem auto;
+      color: #c3c3c3;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 3rem 1rem;
+      background-color: #10151f;
+    }
+
+    .feature-card {
+      background-color: #1b2230;
+      margin: 1rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 0 10px rgba(0, 255, 195, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+      color: #00ffc3;
+    }
+
+    footer {
+      background-color: #0d121a;
+      padding: 2rem;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="main-header">
-    <div class="logo">📊 Owais AI</div>
+
+  <!-- 🔹 Header -->
+  <header>
+    <a href="./logo.html"><img src="./favicon.ico" alt="Logo" width="40" /></a>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Learn</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
+      <a href="./index.html">Home</a>
+      <a href="./tools.html">Tools</a>
+      <a href="./chat-analyzer.html">Chatbot</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contact.html">Contact</a>
     </nav>
-    <div class="actions">
-      <input type="text" placeholder="Search..." class="search-box" />
-      <i class="fas fa-bell bell-icon"></i>
-      <button class="btn-sign">Sign In</button>
-    </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- 🔹 Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>AI Signals, 99% Accuracy</h1>
-      <p>Upload your chart and get expert analysis in seconds — powered by real-time AI intelligence.</p>
-      <div class="upload-box">
-        <input type="file" id="upload" />
-        <label for="upload"><i class="fas fa-upload"></i> Upload Chart</label>
-      </div>
+    <h1>AI-Powered Trading Tools for Crypto, Forex & Stocks</h1>
+    <p>
+      Discover smart signals, chart analysis, and educational tools driven by Artificial Intelligence.
+      Learn, Analyze, and Trade like professionals — in English and Urdu.
+    </p>
+  </section>
+
+  <!-- 🔹 Features Section -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>📈 Signal Generator</h3>
+      <p>High-accuracy buy/sell signals with SL/TP zones using advanced chart recognition.</p>
     </div>
-    <div class="chat-box">
-      <p class="chat-placeholder">Ask AI anything about your chart...</p>
+
+    <div class="feature-card">
+      <h3>🧠 AI Chart Analyzer</h3>
+      <p>Upload any chart image and get complete technical + fundamental analysis instantly.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>📚 Learning Bot</h3>
+      <p>Interactive chatbot to teach you trading from beginner to pro – Urdu & English both.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>💹 Money Management</h3>
+      <p>Calculate safe risk/reward ratio, profit/loss and capital allocation like a pro.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🌐 Live Market News</h3>
+      <p>Real-time updates & news analysis affecting crypto, forex, and stock markets.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🔒 Access Control</h3>
+      <p>Free users get 2 signals/day, paid users get full access. Smart API fallback built-in.</p>
     </div>
   </section>
 
-  <!-- Live Prices Bar -->
-  <section class="live-prices">
-    <marquee>
-      BTC: $63,400 ↑ | ETH: $3,120 ↓ | NASDAQ: 15,230 ↑ | GOLD: $2,415 ↓ | EUR/USD: 1.0890 ↑
-    </marquee>
-  </section>
-
-  <!-- Footer -->
+  <!-- 🔹 Footer -->
   <footer>
-    <p>&copy; 2025 Technical Owais | All rights reserved.</p>
-    <div class="footer-links">
-      <a href="#">Disclaimer</a>
-      <a href="#">Privacy</a>
-      <a href="#">Contact</a>
-    </div>
+    &copy; 2025 Technical Owais Ali | All Rights Reserved. | Powered by AI
   </footer>
+
+  <!-- 🔹 External Scripts -->
+  <script src="./scripts/newbar.js"></script>
+  <script src="./scripts/main.js"></script>
 </body>
 </html>
