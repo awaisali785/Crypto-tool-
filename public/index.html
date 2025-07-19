@@ -84,23 +84,34 @@
 <body>
 
   <!-- Header -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">AI Trading Tools</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-        <i class="bi bi-bell-fill me-3 text-white"></i>
-        <button class="btn btn-login">Login</button>
-        <button class="btn btn-login">Sign Up</button>
-      </div>
+  <!-- ✅ Updated Header/Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="bi bi-bar-chart-fill fs-4 me-2"></i>
+      AI Trading Tools
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Learning</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+      </ul>
+      <i class="bi bi-bell-fill me-3 text-white fs-5 position-relative">
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          5
+        </span>
+      </i>
+      <button class="btn btn-login">Sign In</button>
+      <button class="btn btn-login">Sign Up</button>
     </div>
-  </nav>
-
+  </div>
+</nav>
   <!-- Live Price Ticker -->
   <div class="ticker-bar">
     <div class="ticker-text">
