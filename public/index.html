@@ -84,22 +84,6 @@
 <body>
 
   <!-- Header -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">AI Trading Tools</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
-        <i class="bi bi-bell-fill me-3 text-white"></i>
-        <button class="btn btn-login">Login</button>
-        <button class="btn btn-login">Sign Up</button>
-      </div>
-    </div>
-  </nav>
 
   <!-- Live Price Ticker -->
   <div class="ticker-bar">
@@ -117,7 +101,37 @@
       <div class="col-md-4 mb-4">
         <div class="card p-4">
           <i class="bi bi-graph-up fs-1 mb-3 text-primary"></i>
-          <h4>Signal Generator</h4>
+     <!-- Header -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Logo + Website Name -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png" alt="Logo" width="35" height="35" class="me-2" />
+      <span>AI Trading Tools</span>
+    </a>
+
+    <!-- Responsive Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Learning</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      </ul>
+
+      <!-- Bell Icon + Buttons -->
+      <i class="bi bi-bell-fill fs-5 me-3 text-white" style="cursor: pointer;"></i>
+      <button class="btn btn-login">Login</button>
+      <button class="btn btn-login">Sign Up</button>
+    </div>
+  </div>
+</nav>     <h4>Signal Generator</h4>
           <p>Analyze chart patterns and get automatic Buy/Sell signals with SL/TP.</p>
         </div>
       </div>
