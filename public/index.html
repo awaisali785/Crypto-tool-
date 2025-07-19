@@ -1,51 +1,63 @@
-<!DOCTYPE html><html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chart Signal Detector</title><!-- Phosphor Icons CDN -->
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-<!-- Main Stylesheet -->
-<link rel="stylesheet" href="/styles/main.css" />
-<!-- Signal Card Stylesheet -->
-<link rel="stylesheet" href="/styles/signal-card.css" />
-
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">AI Signal</div>
-      <ul class="nav-links">
-        <li><a href="/" class="active"><i class="ph ph-chart-bar"></i> Signal Detector</a></li>
-        <li><a href="/pages/learn.html"><i class="ph ph-graduation-cap"></i> Learn</a></li>
-        <li><a href="/pages/blog.html"><i class="ph ph-note-pencil"></i> Blog</a></li>
-        <li><a href="/pages/about.html"><i class="ph ph-user-circle"></i> About</a></li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Trading Tools | Technical Owais</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2e0e6fa0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">📊 Owais AI</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Learn</a></li>
+        <li><a href="#">About</a></li>
       </ul>
-    </nav><!-- Main Content -->
-<main>
-  <!-- Upload Chart Section -->
-  <section class="upload-box">
-    <h1>Upload Your Chart</h1>
-    <label for="chartInput">Select Chart</label>
-    <input type="file" id="chartInput" accept="image/*" />
-    <div class="preview">
-      <img id="previewImage" alt="Chart Preview" />
+    </nav>
+    <div class="actions">
+      <input type="text" placeholder="Search..." class="search-box" />
+      <i class="fas fa-bell bell-icon"></i>
+      <button class="btn-sign">Sign In</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>AI Signals, 99% Accuracy</h1>
+      <p>Upload your chart and get expert analysis in seconds — powered by real-time AI intelligence.</p>
+      <div class="upload-box">
+        <input type="file" id="upload" />
+        <label for="upload"><i class="fas fa-upload"></i> Upload Chart</label>
+      </div>
+    </div>
+    <div class="chat-box">
+      <p class="chat-placeholder">Ask AI anything about your chart...</p>
     </div>
   </section>
 
-  <!-- Chatbox Section -->
-  <section class="chatbox">
-    <h2>Analysis Chat</h2>
-    <div id="chatMessages" class="messages"></div>
-    <form id="chatForm">
-      <input type="text" id="userInput" placeholder="Ask about this chart..." required />
-      <button type="submit"><i class="ph ph-paper-plane-tilt"></i></button>
-    </form>
+  <!-- Live Prices Bar -->
+  <section class="live-prices">
+    <marquee>
+      BTC: $63,400 ↑ | ETH: $3,120 ↓ | NASDAQ: 15,230 ↑ | GOLD: $2,415 ↓ | EUR/USD: 1.0890 ↑
+    </marquee>
   </section>
-</main>
 
-<!-- Scripts -->
-<script src="/scripts/main.js"></script>
-
-  </body>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Technical Owais | All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Disclaimer</a>
+      <a href="#">Privacy</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+</body>
 </html>
