@@ -1,112 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crypto Tool - Home</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-</head>
-<body>
-  <header>
-    <nav>
-      <h1><i class="fas fa-robot ai-icon"></i> Crypto Tool</h1>
-      <a href="index.html" class="active">Home</a>
-      <a href="pages/about.html">About</a>
-      <a href="pages/blog.html">Blog</a>
-      <a href="pages/learning.html">Learn</a>
-      <a href="pages/tools.html">Tools</a>
-      <a href="pages/help.html">Help</a>
-    </nav>
-  </header>
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chart Signal Detector</title><!-- Phosphor Icons CDN -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1><i class="fas fa-brain ai-icon"></i> AI Powered Trading Signals</h1>
-      <p>100% accurate AI-based analysis and signals for Crypto, Forex, and Stocks.</p>
-      <a href="#tools" class="cta-button">Explore Tools</a>
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="/styles/main.css" />
+<!-- Signal Card Stylesheet -->
+<link rel="stylesheet" href="/styles/signal-card.css" />
+
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">AI Signal</div>
+      <ul class="nav-links">
+        <li><a href="/" class="active"><i class="ph ph-chart-bar"></i> Signal Detector</a></li>
+        <li><a href="/pages/learn.html"><i class="ph ph-graduation-cap"></i> Learn</a></li>
+        <li><a href="/pages/blog.html"><i class="ph ph-note-pencil"></i> Blog</a></li>
+        <li><a href="/pages/about.html"><i class="ph ph-user-circle"></i> About</a></li>
+      </ul>
+    </nav><!-- Main Content -->
+<main>
+  <!-- Upload Chart Section -->
+  <section class="upload-box">
+    <h1>Upload Your Chart</h1>
+    <label for="chartInput">Select Chart</label>
+    <input type="file" id="chartInput" accept="image/*" />
+    <div class="preview">
+      <img id="previewImage" alt="Chart Preview" />
     </div>
   </section>
 
-  <section class="tools-section" id="tools">
-    <div class="tools-container">
-      <h2><i class="fas fa-toolbox crypto-icon"></i> Explore Our Tools</h2>
-      <div class="tools-grid">
-
-        <div class="tool-card">
-          <h3><i class="fas fa-chart-area ai-icon"></i> Signal Detector</h3>
-          <p>Upload charts and get automatic buy/sell signals with SL/TP/Entry.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3><i class="fas fa-book-open blog-icon"></i> Learning Tool</h3>
-          <p>AI explains your chart in English, with full technical analysis.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3><i class="fas fa-wallet money-icon"></i> Money Manager</h3>
-          <p>Risk calculator, profit/loss tracker, and portfolio breakdown.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3><i class="fas fa-coins price-icon"></i> Live Prices</h3>
-          <p>See real-time prices for crypto, forex, and stock markets in one place.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3><i class="fas fa-blog blog-icon"></i> Blog & Learning</h3>
-          <p>Educational blogs, indicators, and strategy guides.</p>
-        </div>
-
-        <div class="tool-card">
-          <h3><i class="fas fa-envelope about-icon"></i> User Feedback</h3>
-          <p>Submit questions or feedback, and we'll respond quickly.</p>
-        </div>
-
-      </div>
-    </div>
+  <!-- Chatbox Section -->
+  <section class="chatbox">
+    <h2>Analysis Chat</h2>
+    <div id="chatMessages" class="messages"></div>
+    <form id="chatForm">
+      <input type="text" id="userInput" placeholder="Ask about this chart..." required />
+      <button type="submit"><i class="ph ph-paper-plane-tilt"></i></button>
+    </form>
   </section>
+</main>
 
-  <main>
-    <section class="features">
-      <div class="feature-box">
-        <h3><i class="fas fa-bolt ai-icon"></i> Live Signals</h3>
-        <p>Accurate crypto, forex, and stock signals with SL/TP zones.</p>
-      </div>
-      <div class="feature-box">
-        <h3><i class="fas fa-chart-line crypto-icon"></i> Chart Analysis</h3>
-        <p>Upload your chart and get instant AI-powered insights.</p>
-      </div>
-      <div class="feature-box">
-        <h3><i class="fas fa-graduation-cap blog-icon"></i> Learn to Trade</h3>
-        <p>Step-by-step educational guides in English.</p>
-      </div>
-    </section>
+<!-- Scripts -->
+<script src="/scripts/main.js"></script>
 
-    <section class="about-us-section" id="about">
-      <h2><i class="fas fa-user-astronaut about-icon"></i> About Technical Owais Ali</h2>
-      <p>
-        Technical Owais Ali is a professional AI-powered trading tools platform helping traders analyze markets smarter and faster. We provide real-time signals, technical and fundamental analysis, live news, and complete education — all in one place.
-      </p>
-      <p>
-        Our tools support Crypto, Forex, and Stock markets for both beginners and advanced traders. With multilingual support and mobile-friendly design, we bring professional-grade trading to everyone.
-      </p>
-    </section>
-
-    <section class="live-prices-section" id="live-prices">
-      <h2><i class="fas fa-coins price-icon"></i> Live Market Prices</h2>
-      <div id="price-container">
-        <p>Loading prices...</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Crypto Tool. All Rights Reserved.</p>
-  </footer>
-  <script src="scripts/script.js"></script>
-</body>
+  </body>
 </html>
