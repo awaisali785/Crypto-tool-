@@ -2,93 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Trading Tools</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://kit.fontawesome.com/a2e0e9e809.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Trading Tools</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .navbar {
+      background-color: #0d1b2a;
+    }
+    .navbar-brand, .nav-link, .btn {
+      color: white !important;
+    }
+    .btn-login {
+      background-color: #1b263b;
+      border: none;
+      padding: 6px 12px;
+      margin-left: 10px;
+    }
+    .ticker-bar {
+      background-color: #1b263b;
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 25s linear infinite;
+    }
+    @keyframes scroll-left {
+      from { transform: translateX(0%); }
+      to { transform: translateX(-100%); }
+    }
+    .main-section {
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    }
+    .footer {
+      background-color: #0d1b2a;
+      color: white;
+      padding: 20px 0;
+      position: relative;
+    }
+    .chat-icon {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #1b263b;
+      color: white;
+      padding: 14px;
+      border-radius: 50%;
+      font-size: 20px;
+      z-index: 9999;
+      cursor: pointer;
+    }
+    .newsletter input {
+      padding: 8px;
+      width: 70%;
+      border: none;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    .newsletter button {
+      padding: 8px 12px;
+      background-color: #1b9aaa;
+      border: none;
+      border-radius: 4px;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="header">
-    <div class="logo">TradeMaster</div>
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Signal Tool</a>
-      <a href="#">Learning Board</a>
-      <a href="#">Money Management</a>
-      <a href="#">Blog</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-    <div class="header-icons">
-      <button class="btn">Sign Up</button>
-      <button class="btn">Login</button>
-      <i class="fas fa-bell notify-bell"></i>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AI Trading Tools</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        <i class="bi bi-bell-fill me-3 text-white"></i>
+        <button class="btn btn-login">Login</button>
+        <button class="btn btn-login">Sign Up</button>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Live Ticker -->
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span>BTC/USD: $67,482</span>
-      <span>ETH/USD: $3,472</span>
-      <span>GBP/USD: 1.2876</span>
-      <span>Gold: $2,384</span>
-      <span>AAPL: $215.30</span>
-      <span>EUR/USD: 1.0921</span>
+  <!-- Live Price Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-text">
+      🪙 BTC/USD: $63,000 &nbsp;&nbsp;&nbsp; ETH/USD: $3,100 &nbsp;&nbsp;&nbsp; GBP/USD: 1.29 &nbsp;&nbsp;&nbsp; EUR/USD: 1.10 &nbsp;&nbsp;&nbsp; GOLD: $2,450 &nbsp;&nbsp;&nbsp; APPLE: $198.35 &nbsp;&nbsp;&nbsp; TESLA: $235.67 &nbsp;&nbsp;&nbsp;
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>AI Powered Chart Analyzer</h1>
-    <p>Upload a chart and get powerful trading insights in Urdu & English.</p>
-  </section>
+  <!-- Main Section -->
+  <section class="main-section text-center">
+    <h1>AI-Powered Signal Generator</h1>
+    <p>Upload chart images or view market analysis in real-time.</p>
 
-  <!-- Cards Section -->
-  <section class="cards">
-    <div class="card">
-      <i class="fas fa-chart-line"></i>
-      <h3>Signal Generator</h3>
-      <p>Smart buy/sell signals with SL/TP zones</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-graduation-cap"></i>
-      <h3>Learning Board</h3>
-      <p>Learn trading patterns & strategies from scratch</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-coins"></i>
-      <h3>Money Management</h3>
-      <p>Risk calculation, equity control, capital planning</p>
-    </div>
-    <div class="card">
-      <i class="fas fa-blog"></i>
-      <h3>Trading Blog</h3>
-      <p>Latest market updates & tutorials</p>
+    <div class="row mt-5">
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <i class="bi bi-graph-up fs-1 mb-3 text-primary"></i>
+          <h4>Signal Generator</h4>
+          <p>Analyze chart patterns and get automatic Buy/Sell signals with SL/TP.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <i class="bi bi-mortarboard-fill fs-1 mb-3 text-success"></i>
+          <h4>Learning Board</h4>
+          <p>Get educational content on trading, risk management and strategy building.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-4">
+          <i class="bi bi-calculator-fill fs-1 mb-3 text-warning"></i>
+          <h4>Money Manager</h4>
+          <p>Calculate your capital, risk, and profit/loss based on your strategy.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#">Disclaimer</a>
-      <a href="#">Explore Tools</a>
-      <a href="#">About Us</a>
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-md-3"><a href="#" class="text-white">Home</a></div>
+        <div class="col-md-3"><a href="#" class="text-white">Disclaimer</a></div>
+        <div class="col-md-3"><a href="#" class="text-white">Explore Tools</a></div>
+        <div class="col-md-3"><a href="#" class="text-white">About Us</a></div>
+      </div>
+      <div class="newsletter mb-3">
+        <form class="d-flex justify-content-center">
+          <input type="email" placeholder="Your email..." required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <p class="mb-0">&copy; 2025 Technical Owais Ali. All rights reserved.</p>
     </div>
-    <form class="newsletter">
-      <label for="email">Subscribe to Newsletter:</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
   </footer>
 
   <!-- Floating Chat Icon -->
   <div class="chat-icon">
-    <i class="fas fa-comment-dots"></i>
+    <i class="bi bi-chat-dots-fill"></i>
   </div>
 
 </body>
-</html>
+  </html>
